@@ -29,7 +29,7 @@ function Room() {
     );
 
   useEffect(() => {
-    const ws = new WebSocket("http://localhost:5050");
+    const ws = new WebSocket("https://nexa-backend-1.onrender.com");
 
     ws.onopen = () => {
       ws.send(JSON.stringify({ type: "join", payload: { roomId } }));
